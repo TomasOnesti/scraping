@@ -1,0 +1,11 @@
+.contener{
+    display: flex;
+    justify-content: baseline;
+    gap: 20px;
+}
+.card{
+    border: black solid 1px;
+    border-radius: 10px;
+    background-color: rgb(238, 127, 127);
+}
+
