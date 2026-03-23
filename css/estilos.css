@@ -1,7 +1,7 @@
 .contener{
     display: flex;
     justify-content: baseline;
-    gap: 20px;
+   
 }
 .card{
     border: black solid 1px;
