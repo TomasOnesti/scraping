@@ -1,0 +1,77 @@
+fetch('datos/productos.json')
+
+.then(res => res.json())
+.then(data=>{
+    const contenedor = document.getElementById("conteiner");
+
+    const filtrar = data.filter(producto =>
+        producto.nombre.includes("Huevo")
+    );
+
+    filtrar.forEach(producto => {
+        const espacio = document.createElement("div");
+        espacio.innerHTML = `
+            <img src="${producto.imagen}" width="150">
+            <h3>${producto.nombre}</h3>
+            <p>Precio: ${producto.precio}</p>
+            <p>Gramaje: ${producto.gramaje}</p>
+        `;
+        espacio.classList.add("card");
+        contenedor.appendChild(espacio);
+        
+    });
+
+});
+
+function limpiarPrecio(precio) {
+    if (typeof precio === "number"){
+        return precio
+    }
+    return parseFloat(
+        precio
+            .replace("$", "")
+            .replace(/\./g, "")   
+            .replace(",", ".")    
+    );
+}
+
+function barato(){
+            console.log("funcion ejecutada");
+            
+    fetch('datos/productos.json')
+
+        .then(res => res.json())
+        .then(data=>{
+        
+            const contenedor = document.getElementById("conteiner_barato");
+            contenedor.innerHTML="";
+            const filtrar = data.filter(producto =>
+            producto.nombre.includes("Huevo")
+        );
+            filtrar.sort((a, b) => {
+                return limpiarPrecio(a.precio) - limpiarPrecio(b.precio);
+            });
+            
+            filtrar.forEach(producto => {
+            const espacio = document.createElement("div");
+            espacio.innerHTML = `
+                <img src="${producto.imagen}" width="150">
+                <h3>${producto.nombre}</h3>
+                <p>Precio: ${producto.precio}</p>
+                <p>Gramaje: ${producto.gramaje}</p>
+            `;
+            const precio = limpiarPrecio(producto.precio);
+            if(precio < 8000){
+                espacio.classList.add("card_barato");
+            }else{
+                espacio.classList.add("card_caro");
+            }
+            contenedor.appendChild(espacio);
+        });
+    });
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    barato();
+});

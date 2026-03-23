@@ -28,7 +28,7 @@ for i in productos:
         "gramaje": gramaje
     })
 
-archivo = "datos/productos_coto.json"
+archivo = "datos/productos.json"
 
 if not os.path.exists(archivo):
     with open(archivo, "w", encoding="utf-8") as f:

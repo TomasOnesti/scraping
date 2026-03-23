@@ -9,3 +9,15 @@
     background-color: rgb(238, 127, 127);
 }
 
+.card_barato{
+    border: black solid 1px;
+    border-radius: 10px;
+    background-color: rgb(173, 240, 134);
+}
+
+.card_caro{
+    border: black solid 1px;
+    border-radius: 10px;
+    background-color: rgb(221, 21, 21);
+
+}
