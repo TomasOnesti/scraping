@@ -1,7 +1,6 @@
 .contener{
     display: flex;
     justify-content: baseline;
-   
 }
 .card{
     border: black solid 1px;
