@@ -15,6 +15,7 @@ lista=[]
 for i in productos:
     nombre = i.find_element(By.TAG_NAME, "h3").text
     precio = i.find_element(By.TAG_NAME,"h4").text
+    aclaracion = i.find_element(By.CLASS_NAME,"offer-crum").text
     img_element = i.find_element(By.CLASS_NAME, "product-image")
     imagen = img_element.get_attribute("src")
     gramaje= ""
@@ -24,14 +25,15 @@ for i in productos:
     lista.append({
         "nombre": nombre,
         "precio": precio,
+        "aclaracion":aclaracion,
         "imagen": imagen, 
         "gramaje": gramaje
     })
 
 archivo = "datos/productos.json"
 
-if not os.path.exists(archivo):
-    with open(archivo, "w", encoding="utf-8") as f:
-        json.dump(lista, f, ensure_ascii=False, indent=4)  
+
+with open(archivo, "w", encoding="utf-8") as f:
+    json.dump(lista, f, ensure_ascii=False, indent=4)  
         
 driver.quit()

@@ -2,6 +2,26 @@
     margin: 0px;
     padding: 0px;
 }
+#cont_titulo{
+    display: flex;
+    justify-content: center;
+    background-color: chocolate;
+    height: 120px;
+    align-items: center;
+}
+#titulo{
+    font-size: 3rem;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.fondo{
+    background-image: url(../img/pascuas.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment:fixed;
+    background-size: cover;
+}
 
 .contener{
     display: grid;
@@ -9,12 +29,19 @@
     gap: 10px;
 }
 
+.fin{
+    background-color: chocolate;
+    font-size: 2rem;
+    text-decoration: underline;
+}
 
 .marca{
     width: 100px;
     border-radius: 50px;
     border: black solid 1px;
     margin: 10px;
+    position: relative;
+    left: 150px;
 }
 
 .card{
@@ -29,7 +56,8 @@
     background-color: rgb(173, 240, 134);
     margin: 10px;
     padding: 10px;
-    width: 400px;
+    width: 350px;
+    font-style: italic;
 }
 
 .card_barato img{
@@ -44,7 +72,8 @@
     background-color: rgb(221, 21, 21);
     margin: 10px;
     padding: 10px;
-    width: 400px;
+    width: 350px;
+    font-style: italic;
 }
 .card_caro img{
     width: 150px;

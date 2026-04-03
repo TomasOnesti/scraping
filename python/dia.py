@@ -15,6 +15,7 @@ lista=[]
 for i in productos:
     nombre = i.find_element(By.CLASS_NAME, "vtex-product-summary-2-x-productBrand").text
     precio = i.find_element(By.CLASS_NAME,"diaio-store-5-x-sellingPriceValue").text
+    aclaracion = i.find_element(By.CLASS_NAME,"vtex-product-highlights-2-x-productHighlightText--promotions").text
     img_element = i.find_element(By.TAG_NAME, "img")
     imagen = img_element.get_attribute("src")
     gramaje= ""
@@ -24,6 +25,7 @@ for i in productos:
     lista.append({
         "nombre": nombre,
         "precio": precio,
+        "aclaracion":aclaracion,
         "imagen": imagen, 
         "gramaje": gramaje
     })

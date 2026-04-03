@@ -25,6 +25,10 @@ for i in productos:
     except:
         precio = ""
     
+    try:
+        aclaracion = i.find_element(By.CLASS_NAME,"js-offer-label-private").text
+    except:
+        aclaracion = ""
     img_element = i.find_element(By.TAG_NAME, "img")
 
     imagen = img_element.get_attribute("src")
@@ -47,6 +51,7 @@ for i in productos:
     lista.append({
         "nombre": nombre,
         "precio": precio,
+        "aclaracion":aclaracion,
         "imagen": imagen, 
         "gramaje": gramaje
     })

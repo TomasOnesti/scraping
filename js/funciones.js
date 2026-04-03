@@ -25,12 +25,14 @@ function barato(){
             filtrar.sort((a, b) => {
                 return limpiarprecio(a.precio) - limpiarprecio(b.precio);
             });
-            
-            filtrar.forEach(producto => {
+            const limite = filtrar.slice(0, 16);
+
+            limite.forEach(producto => {
             const espacio = document.createElement("div");
             espacio.innerHTML = `
                 <img src="${producto.imagen}" width="150">
                 <h3>${producto.nombre}</h3>
+                <p>Promo: ${producto.aclaracion}</p>
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;
@@ -62,6 +64,7 @@ function barato(){
             espacio.innerHTML = `
                 <img src="${producto.imagen}" width="150">
                 <h3>${producto.nombre}</h3>
+                <p>Promo: ${producto.aclaracion}</p>
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;
@@ -86,12 +89,13 @@ function barato(){
             filtrar.sort((a, b) => {
                 return limpiarprecio(a.precio) - limpiarprecio(b.precio);
             });
-
-            filtrar.forEach(producto => {
+            const limite = filtrar.slice(0, 16);
+            limite.forEach(producto => {
             const espacio = document.createElement("div");
             espacio.innerHTML = `
                 <img src="${producto.imagen}" width="150">
                 <h3>${producto.nombre}</h3>
+                <p>Promo: ${producto.aclaracion}</p>
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;

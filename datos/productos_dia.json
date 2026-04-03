@@ -2,97 +2,113 @@
     {
         "nombre": "Huevo De Pascua Milka Leche 157 Gr.",
         "precio": "$ 21.000",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/366565-500-auto?v=639094238907530000&width=500&height=auto&aspect=true",
         "gramaje": "157 g"
     },
     {
         "nombre": "Huevo de pascua Shot 210 Gr.",
         "precio": "$ 25.000",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/366570-500-auto?v=639094238975200000&width=500&height=auto&aspect=true",
         "gramaje": "210 g"
     },
     {
         "nombre": "Huevo De Pascua Kinder Con Sorpresa 150 Gr.",
         "precio": "$ 30.900",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/347458-500-auto?v=638786814548500000&width=500&height=auto&aspect=true",
         "gramaje": "150 g"
     },
     {
         "nombre": "Huevo de Pascua Kinder Niñas con Sorpresa 150 Gr.",
         "precio": "$ 30.900",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/347523-500-auto?v=638786841014930000&width=500&height=auto&aspect=true",
         "gramaje": "150 g"
     },
     {
         "nombre": "Huevo de Pascua Nugaton 91 Gr.",
         "precio": "$ 8.280",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/316379-500-auto?v=638785902112600000&width=500&height=auto&aspect=true",
         "gramaje": "91 g"
     },
     {
         "nombre": "Huevo De Pascua Yummy 200 Gr.",
         "precio": "$ 14.500",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/365362-500-auto?v=639072640323270000&width=500&height=auto&aspect=true",
         "gramaje": "200 g"
     },
     {
         "nombre": "Huevo de Pascua Nugaton 177 Gr.",
         "precio": "$ 14.790",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/321865-500-auto?v=638785902474400000&width=500&height=auto&aspect=true",
         "gramaje": "177 g"
     },
     {
         "nombre": "Huevo De Pascua Ferrero Rocher Con Avellanas 225 Gr.",
         "precio": "$ 37.500",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/347545-500-auto?v=638786843775030000&width=500&height=auto&aspect=true",
         "gramaje": "225 g"
     },
     {
         "nombre": "Huevo de Pascua Bon o bon 55 Gr.",
         "precio": "$ 8.250",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/307056-500-auto?v=638785898957630000&width=500&height=auto&aspect=true",
         "gramaje": "55 g"
     },
     {
         "nombre": "Huevo de Pascua Biznikke 100 Gr.",
         "precio": "$ 9.990",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/310344-500-auto?v=638785904724130000&width=500&height=auto&aspect=true",
         "gramaje": "100 g"
     },
     {
         "nombre": "Huevo de Pascua Bon o Bon 110 Gr.",
         "precio": "$ 14.000",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/306844-500-auto?v=638785901930600000&width=500&height=auto&aspect=true",
         "gramaje": "110 g"
     },
     {
         "nombre": "Huevo Pascua Chocolate Con Confites Mantecol 22 Gr.",
         "precio": "$ 1.990",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/306841-500-auto?v=638785908038570000&width=500&height=auto&aspect=true",
         "gramaje": "22 g"
     },
     {
         "nombre": "Huevo de Pascuas Chocolate Milka 22 Gr.",
         "precio": "$ 2.400",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/366560-500-auto?v=639094238826630000&width=500&height=auto&aspect=true",
         "gramaje": "22 g"
     },
     {
         "nombre": "Huevo Pascua Con Confites Chocolate Toddy 22 Gr.",
         "precio": "$ 1.990",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/330644-500-auto?v=638785908332400000&width=500&height=auto&aspect=true",
         "gramaje": "22 g"
     },
     {
         "nombre": "Huevo De Pascua De Chocolate Delicious Dia 80 Gr.",
         "precio": "$ 7.390",
+        "aclaracion": "2x1",
         "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/348212-500-auto?v=638797484241870000&width=500&height=auto&aspect=true",
         "gramaje": "80 g"
     },
     {
-        "nombre": "Huevo de Pascua Biznikke Blanco 100 Gr.",
-        "precio": "$ 9.990",
-        "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/313078-500-auto?v=638785904911930000&width=500&height=auto&aspect=true",
-        "gramaje": "100 g"
+        "nombre": "Huevo De Pascua Vizzio 87 Gr.",
+        "precio": "$ 8.650",
+        "aclaracion": "2x1",
+        "imagen": "https://ardiaprod.vtexassets.com/arquivos/ids/316378-500-auto?v=638785902245970000&width=500&height=auto&aspect=true",
+        "gramaje": "87 g"
     }
 ]
