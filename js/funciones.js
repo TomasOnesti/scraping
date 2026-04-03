@@ -54,7 +54,7 @@ function barato(){
             producto.nombre.includes("Huevo")
         );
             filtrar.sort((a, b) => {
-                return limpiarPrecio(a.precio) - limpiarPrecio(b.precio);
+                return limpiarprecio(a.precio) - limpiarprecio(b.precio);
             });
 
             filtrar.forEach(producto => {
@@ -65,7 +65,7 @@ function barato(){
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;
-            const precio = limpiarPrecio(producto.precio);
+            const precio = limpiarprecio(producto.precio);
             if(precio < 10000){
                 espacio.classList.add("card_barato");
             }else{
@@ -84,7 +84,7 @@ function barato(){
             producto.nombre.includes("Huevo")
         );
             filtrar.sort((a, b) => {
-                return limpiarPrecio(a.precio) - limpiarPrecio(b.precio);
+                return limpiarprecio(a.precio) - limpiarprecio(b.precio);
             });
 
             filtrar.forEach(producto => {
@@ -95,7 +95,7 @@ function barato(){
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;
-            const precio = limpiarPrecio(producto.precio);
+            const precio = limpiarprecio(producto.precio);
             if(precio < 10000){
                 espacio.classList.add("card_barato");
             }else{
