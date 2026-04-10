@@ -3,18 +3,17 @@ from selenium.webdriver.common.by import By
 import time, json, re, os
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+#Abre la web donde se hara el scraping
 driver = webdriver.Chrome()
 driver.get("https://tienda.open25.com.ar/pascuas/")
+#Busca el elemento donde estan los productos
+productos = driver.find_elements(By.CLASS_NAME, "js-item-product")
+time.sleep(2)#Tiempo de espera para que cargue el JS
 
-productos = WebDriverWait(driver, 10).until(
-    EC.presence_of_all_elements_located((By.CLASS_NAME, "js-item-product"))
-)
-
-driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-time.sleep(2)
 lista=[]
+#Busqueda de cada producto para posterior guardado en la lista
 for i in productos:
+    #Con cada try se verifica que no se guarde nada vacio
     try:
         nombre = i.find_element(By.CLASS_NAME, "js-item-name").text
     except:
@@ -26,13 +25,12 @@ for i in productos:
         precio = ""
     
     try:
-        aclaracion = i.find_element(By.CLASS_NAME,"js-offer-label-private").text
+        aclaracion = i.find_element(By.CLASS_NAME,"js-payment-discount-price-product-container").text
     except:
         aclaracion = ""
+        
     img_element = i.find_element(By.TAG_NAME, "img")
-
     imagen = img_element.get_attribute("src")
-
     if not imagen or "data:image" in imagen:
         imagen = img_element.get_attribute("data-src")
 
@@ -44,7 +42,7 @@ for i in productos:
             
     if nombre == "":
         continue
-
+    #Se para el gramaje del nombre(normalmente suele decirlo jusnto con el nombre)
     match = re.search(r'((\d+(?:[.,]\d+)?)\s?(g|gr|grm))', nombre.lower())
     gramaje = match.group() if match else ""
     
@@ -55,7 +53,7 @@ for i in productos:
         "imagen": imagen, 
         "gramaje": gramaje
     })
-
+#Crea un json y lo guarda en "datos"
 archivo = "datos/productos_open25.json"
 with open(archivo, "w", encoding="utf-8") as f:
     json.dump(lista, f, ensure_ascii=False, indent=4)  

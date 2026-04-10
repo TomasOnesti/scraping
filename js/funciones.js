@@ -1,4 +1,4 @@
-
+//Limpia el precio de expresiones y permite hacer cuentas
 function limpiarprecio(precio) {
     if (typeof precio === "number"){
         return precio
@@ -12,21 +12,23 @@ function limpiarprecio(precio) {
 }
 
 function barato(){
-    fetch('datos/productos.json')
+    fetch('datos/productos.json')//Tomo el json para utilizarlo 
 
         .then(res => res.json())
         .then(data=>{
-        
-            const contenedor = document.getElementById("conteiner_coto");
+            
+            const contenedor = document.getElementById("conteiner_coto");//Establesco donde se van a poner los datos
             contenedor.innerHTML="";
+            //Filtro para que solo salgan huevos de pascua y no conejos de chocolate u otras cosas
             const filtrar = data.filter(producto =>
             producto.nombre.includes("Huevo")
         );
+            //Filtra del mas barato al mas caro
             filtrar.sort((a, b) => {
                 return limpiarprecio(a.precio) - limpiarprecio(b.precio);
             });
-            const limite = filtrar.slice(0, 16);
-
+            const limite = filtrar.slice(0, 16);//Pone un limite de muestra de 16 productos
+            //Establece los productos del array para ser mostrados en la pagina
             limite.forEach(producto => {
             const espacio = document.createElement("div");
             espacio.innerHTML = `
@@ -36,17 +38,18 @@ function barato(){
                 <p>Precio: ${producto.precio}</p>
                 <p>Gramaje: ${producto.gramaje}</p>
             `;
+            //Si el precio es menor a 10000 se pone como barato, si es mayor como caro
             const precio = limpiarprecio(producto.precio);
-            if(precio < 8000){
+            if(precio < 10000){
                 espacio.classList.add("card_barato");
             }else{
                 espacio.classList.add("card_caro");
             }
-            contenedor.appendChild(espacio);
+            contenedor.appendChild(espacio);//Muestra los productos en la pagina
         });
     });
 
-
+//En los otros dos es lo mismo cambiando los datos por los de sus json y los div donde se van a mostrar
     fetch('datos/productos_open25.json')
     .then(res => res.json())
     .then(data =>{
@@ -110,7 +113,7 @@ function barato(){
     });
 
 }
-
+//Ejecuta la funcion
 document.addEventListener("DOMContentLoaded", () => {
     barato();
 });

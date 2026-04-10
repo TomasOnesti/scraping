@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time, json, re, os
- 
+ #Igual que dia.py con leves diferencias(la paagina y los nombres de clases o tag donde estan los datos de los productos)
  
 driver = webdriver.Chrome()
 

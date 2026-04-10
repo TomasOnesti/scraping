@@ -1,41 +1,40 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
-#cont_titulo{
+
+#cont_titulo {
     display: flex;
     justify-content: center;
     background-color: chocolate;
     height: 120px;
     align-items: center;
 }
-#titulo{
+
+#titulo {
     font-size: 3rem;
     text-decoration: underline;
     font-style: italic;
 }
 
-.fondo{
+.fondo {
     background-image: url(../img/pascuas.png);
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-size: cover;
 }
 
-.contener{
-    display: grid;
-    grid-template-columns: repeat(3,2fr);
-    gap: 10px;
-}
-
-.fin{
+.fin {
     background-color: chocolate;
     font-size: 2rem;
     text-decoration: underline;
+    text-align: center;
+    padding: 10px;
 }
 
-.marca{
+.marca {
     width: 100px;
     border-radius: 50px;
     border: black solid 1px;
@@ -44,13 +43,13 @@
     left: 150px;
 }
 
-.card{
+.card {
     border: black solid 1px;
     border-radius: 10px;
     background-color: rgb(238, 127, 127);
 }
 
-.card_barato{
+.card_barato {
     border: black solid 1px;
     border-radius: 10px;
     background-color: rgb(173, 240, 134);
@@ -60,13 +59,12 @@
     font-style: italic;
 }
 
-.card_barato img{
+.card_barato img {
     width: 150px;
     height: 150px;
 }
 
-
-.card_caro{
+.card_caro {
     border: black solid 1px;
     border-radius: 10px;
     background-color: rgb(221, 21, 21);
@@ -75,8 +73,157 @@
     width: 350px;
     font-style: italic;
 }
-.card_caro img{
+
+.card_caro img {
     width: 150px;
     height: 150px;
-    
+}
+
+.contener {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+/* PANTALLA GRANDE */
+@media (min-width: 1600px) {
+    .contener {
+        max-width: 1800px;
+        margin: 0 auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card_barato,
+    .card_caro {
+        width: 420px;
+    }
+
+    .card_barato img,
+    .card_caro img {
+        width: 180px;
+        height: 180px;
+    }
+
+    #titulo {
+        font-size: 3.5rem;
+    }
+
+    .marca {
+        width: 130px;
+        left: 180px;
+    }
+}
+
+/* 
+   TABLET GRANDE 
+    */
+@media (max-width: 1200px) {
+    .contener {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        width: 100vw;
+        gap: 0;
+        padding: 0;
+    }
+
+    .contener > div {
+        flex: 0 0 50vw;          
+        width: 50vw;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px 10px;
+        overflow-y: auto;
+    }
+
+    .marca {
+        position: static;
+        left: 0;
+        margin: 10px auto 14px;
+    }
+
+    .card_barato,
+    .card_caro {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .contener::after {
+        content: "← deslizá →";
+        position: fixed;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(210, 105, 30, 0.85);
+        color: white;
+        font-size: 0.85rem;
+        padding: 5px 16px;
+        border-radius: 20px;
+        pointer-events: none;
+        white-space: nowrap;
+    }
+}
+
+/* TABLET CHICA */
+@media (max-width: 768px) {
+    #titulo {
+        font-size: 2rem;
+    }
+
+    #cont_titulo {
+        height: 90px;
+    }
+
+    .contener > div {
+        flex: 0 0 100vw;        
+        width: 100vw;
+    }
+
+    .card_barato,
+    .card_caro {
+        width: 88%;
+        max-width: 400px;
+    }
+
+    .fin {
+        font-size: 1.4rem;
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 480px) {
+    #titulo {
+        font-size: 1.4rem;
+    }
+
+    #cont_titulo {
+        height: 70px;
+    }
+
+    .card_barato,
+    .card_caro {
+        width: 92%;
+        padding: 8px;
+        margin: 5px auto;
+    }
+
+    .card_barato img,
+    .card_caro img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .marca {
+        width: 80px;
+    }
+
+    .fin {
+        font-size: 1rem;
+    }
 }
